@@ -7,6 +7,7 @@
 // @match        https://www.youtube.com/watch*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=youtube.com
 // @updateURL    https://raw.githubusercontent.com/hirotada-t/byebyeAds/main/script.user.js
+// @downloadURL
 // @grant        none
 // ==/UserScript==
 
