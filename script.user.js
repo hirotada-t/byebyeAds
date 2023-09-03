@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       hirotada-t
-// @match        https://www.youtube.com/*
+// @match        https://www.youtube.com/watch*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=youtube.com
 // @updateURL    https://raw.githubusercontent.com/hirotada-t/byebyeAds/main/script.user.js
 // @grant        none
@@ -18,6 +18,7 @@ setInterval(() => {
   const skipBtnList = document.querySelectorAll(".ytp-ad-skip-button");
   const existAds = exist(adsVideoList);
   const existSkip = exist(skipBtnList);
+  console.log(existAds);
   if (existAds) {
     adsVideoList.forEach((v) => {
       v.playbackRate = 16;
