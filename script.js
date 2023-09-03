@@ -6,7 +6,7 @@
 // @author       You
 // @match        https://www.youtube.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=youtube.com
-// @updateURL
+// @updateURL    https://raw.githubusercontent.com/hirotada-t/byebyeAds/main/script.user.js
 // @grant        none
 // ==/UserScript==
 
