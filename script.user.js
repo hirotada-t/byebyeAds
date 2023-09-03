@@ -17,18 +17,16 @@
 setInterval(() => {
   const moviePlayer = document.getElementById("movie_player");
   const existAds = moviePlayer.classList.contains("ad-showing");
-  // const skipBtnList = document.querySelectorAll(".ytp-ad-skip-button");
-  // const existSkip = exist(skipBtnList);
+  const skipBtn = document.getElementById("ad-text:21");
+
   if (existAds) {
     const video = moviePlayer.querySelector("video");
     video.playbackRate = 16;
     video.muted = true;
   }
-  // if (existSkip) {
-  //   skipBtnList.forEach((b) => {
-  //     if (b.innerText === "広告をスキップ") {
-  //       b.click();
-  //     }
-  //   });
-  // }
+  if (skipBtn) {
+    if (skipBtn.innerText === "広告をスキップ") {
+      skipBtn.click();
+    }
+  }
 }, 1000);
