@@ -20,10 +20,8 @@ setInterval(() => {
   // const skipBtnList = document.querySelectorAll(".ytp-ad-skip-button");
   // const existSkip = exist(skipBtnList);
   if (existAds) {
-    adsVideoList.forEach((v) => {
-      v.playbackRate = 16;
-      v.muted = true;
-    });
+    moviePlayer.playbackRate = 16;
+    moviePlayer.muted = true;
   }
   // if (existSkip) {
   //   skipBtnList.forEach((b) => {
