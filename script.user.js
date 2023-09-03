@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube Ads Sckiper
 // @namespace    http://tampermonkey.net/
-// @version      0.1.1
+// @version      0.1.2
 // @description  try to take over the world!
 // @author       hirotada-t
 // @match        https://www.youtube.com/watch*
@@ -15,26 +15,21 @@
   "use strict";
 })();
 setInterval(() => {
-  const adsVideoList = document.querySelectorAll(".ad-showing");
-  const skipBtnList = document.querySelectorAll(".ytp-ad-skip-button");
-  const existAds = exist(adsVideoList);
-  const existSkip = exist(skipBtnList);
-  console.log(existAds);
+  const moviePlayer = document.getElementById("movie_player");
+  const existAds = moviePlayer.classList.contains("ad-showing");
+  // const skipBtnList = document.querySelectorAll(".ytp-ad-skip-button");
+  // const existSkip = exist(skipBtnList);
   if (existAds) {
     adsVideoList.forEach((v) => {
       v.playbackRate = 16;
       v.muted = true;
     });
   }
-  if (existSkip) {
-    skipBtnList.forEach((b) => {
-      if (b.innerText === "広告をスキップ") {
-        b.click();
-      }
-    });
-  }
+  // if (existSkip) {
+  //   skipBtnList.forEach((b) => {
+  //     if (b.innerText === "広告をスキップ") {
+  //       b.click();
+  //     }
+  //   });
+  // }
 }, 1000);
-
-const exist = (eleList) => {
-  return eleList.length > 0;
-};
