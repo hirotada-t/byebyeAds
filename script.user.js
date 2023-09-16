@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube Ads Sckiper
 // @namespace    http://tampermonkey.net/
-// @version      0.1.5
+// @version      0.1.6
 // @description  try to take over the world!
 // @author       hirotada-t
 // @match        https://www.youtube.com/watch*
@@ -17,7 +17,8 @@
 setInterval(() => {
   const moviePlayer = document.getElementById("movie_player");
   const existAds = moviePlayer.classList.contains("ad-showing");
-  const skipBtn = document.getElementById("ad-text:21");
+  const skipBtn = document.querySelector(".ytp-ad-skip-button-text");
+  const confirmBtn = document.getElementById("confirm-button");
 
   if (existAds) {
     const video = moviePlayer.querySelector("video");
@@ -28,5 +29,8 @@ setInterval(() => {
     if (skipBtn.innerText === "広告をスキップ") {
       skipBtn.click();
     }
+  }
+  if (confirmBtn) {
+    confirmBtn.click();
   }
 }, 1000);
