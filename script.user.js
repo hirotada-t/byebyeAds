@@ -36,7 +36,7 @@ const intervalId = setInterval(() => {
   }
 }, 1000);
 
-const isWatchPage = window.location.pathname.split("/")[0] === "watch";
+const isWatchPage = window.location.pathname.split("/")[1] === "watch";
 if (!isWatchPage) {
   clearInterval(intervalId);
 }
