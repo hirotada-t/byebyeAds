@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube Ads Sckiper
 // @namespace    http://tampermonkey.net/
-// @version      2.0
+// @version      2.1
 // @description  try to take over the world!
 // @author       hirotada-t
 // @match        https://www.youtube.com/*
