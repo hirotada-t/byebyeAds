@@ -39,6 +39,9 @@ const disableAds = () => {
   document.querySelectorAll('ytd-ad-slot-renderer').forEach((ad) => {
     ad.style.display = 'none';
   });
+  document.querySelectorAll("ytd-search-pyv-renderer").forEach((ad) => {
+    ad.style.display = "none";
+  });
 }
 
 const intervalId = setInterval(() => {
